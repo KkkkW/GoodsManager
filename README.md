@@ -1,0 +1,2 @@
+# GoodsManager
+first commit
