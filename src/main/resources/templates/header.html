@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Insert title here</title>
+</head>
+<body>
+<div class="row border-bottom" th:fragment="headerTop">
+    <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary" href="#"><i class="fa fa-bars"></i> </a>
+        </div>
+        <ul class="nav navbar-top-links navbar-right">
+            <li>
+                <span class="m-r-sm text-muted welcome-message">欢迎进入后台信息管理系统</span>
+            </li>
+            <li>
+                <a href="login" id="logout">
+                    <i class="fa fa-sign-out"></i> 登 出
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script th:inline="javascript">
+        window.onload = function (ev) {
+            $('#logout').click(function (event) {
+                var status = 0;
+                $.ajax({
+                    type: "POST",
+                    url: "Logout",
+                    contentType: "application/json; charset=utf-8",
+                    async:false,
+                    success: function (msg) {
+                        console.log(msg);
+                        console.log("success")
+                    },
+                    error: function () {
+                        alert("系统异常！");
+                        return false;
+                    }
+                });
+
+                if (status === 1)
+                {
+                    return false;
+                }
+            })
+        }
+
+    </script>
+</div>
+</body>
+
+<!-- Mainly scripts -->
+<script th:src="@{/js/jquery-2.1.1.js}"></script>
+<script th:src="@{/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/plugins/metisMenu/jquery.metisMenu.js}"></script>
+<script th:src="@{/js/plugins/slimscroll/jquery.slimscroll.min.js}"></script>
+
+<!-- Peity -->
+<script th:src="@{/js/plugins/peity/jquery.peity.min.js}"></script>
+
+<!-- Custom and plugin javascript -->
+<script th:src="@{/js/inspinia.js}"></script>
+<script th:src="@{/js/plugins/pace/pace.min.js}"></script>
+
+<!-- iCheck -->
+<script th:src="@{/js/plugins/iCheck/icheck.min.js}"></script>
+
+<!-- Peity -->
+<script th:src="@{/js/demo/peity-demo.js}"></script>
+
+<!-- FooTable -->
+<script th:src="@{/js/plugins/footable/footable.all.min.js}"></script>
+
+<!-- common -->
+<script th:src="@{/js/common.js}"></script>
+
+</html>
