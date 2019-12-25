@@ -18,16 +18,3 @@ public class ManagerApplicationTests {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

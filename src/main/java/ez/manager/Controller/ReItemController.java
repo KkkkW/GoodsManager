@@ -48,7 +48,7 @@ public class ReItemController {
             r.setRecoveredStr(DateUtil.getDateStr(r.getRecovered()));
         }
         model.addAttribute("reItemList", reItemList);
-        String pageHTML = PageUtil.getPageContent("ItemManage_{pageCurrent}_{pageSize}_{pageCount}?", pageCurrent, pageSize, pageCount);
+        String pageHTML = PageUtil.getPageContent("RecoverManage_{pageCurrent}_{pageSize}_{pageCount}?", pageCurrent, pageSize, pageCount);
         model.addAttribute("pageHTML", pageHTML);
         model.addAttribute("ReItem", reItem);
         return "MerchandiseManage/RecoverManage";
