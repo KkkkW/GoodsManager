@@ -11,6 +11,23 @@ public class ManagerApplicationTests {
 
     @Test
     public void contextLoads() {
+        System.out.println("shandong!");
+        System.out.println("shandong!");
+        System.out.println("shandong!");
+        System.out.println("shandong!");
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
