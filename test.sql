@@ -225,7 +225,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'admin','admin','杨超群','1054960510@qq.com','挂机'),(2,'admin1','admin1','杨超群','1054960510@qq.com','打怪');
+INSERT INTO `user` VALUES (1,'admin','admin','lihaowei','1054960510@qq.com','挂机'),(2,'admin1','admin1','lihaowei','1054960510@qq.com','打怪');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
